@@ -1,0 +1,18 @@
+<app-pagination />
+<div class="main">
+  @for(person of characters; track person){
+
+  <div class="box">
+    <img src="{{ person.image }}" />
+
+    <h5 class="card-title">{{ person.id }} : {{ person.name }}</h5>
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Status: {{ person.status }}</li>
+      <li class="list-group-item">Species: {{ person.species }}</li>
+      <li class="list-group-item">Gender: {{ person.gender }}</li>
+    </ul>
+  </div>
+  }
+</div>
+<app-pagination />

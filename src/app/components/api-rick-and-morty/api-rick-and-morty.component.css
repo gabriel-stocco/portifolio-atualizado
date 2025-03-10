@@ -1,0 +1,41 @@
+.main {
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  background-color: white;
+  width: 18rem; /* Define a largura do card */
+  border: 1px solid black; /* Borda escura (equivalente a border-dark) */
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  margin: 8px; /* Equivalente a mx-2 my-2 (8px de margem) */
+}
+
+.card-title {
+  margin: 16px;
+  font-size: 1.25rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+img {
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+ul {
+  border-top: 1px solid black;
+  font-family: "Courier New", Courier, monospace;
+  padding-left: 10px;
+
+  font-size: 1.1rem;
+}
+
+li {
+  user-select: none;
+  list-style: none;
+  background-color: white;
+  margin: 8px;
+}
