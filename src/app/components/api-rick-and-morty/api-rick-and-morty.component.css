@@ -1,4 +1,47 @@
-.main {
+/*Paginação*/
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  align-items: center;
+}
+
+.pagination li {
+  border: 1px solid rgba(0, 0, 0, 0.301);
+  border-radius: 3px;
+  min-width: 50px;
+  line-height: 40px;
+  text-align: center;
+  margin: 1px;
+  font-weight: 700;
+  color: rgb(69, 121, 180);
+  font-size: 25px;
+  user-select: none;
+  list-style-type: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination li :hover {
+  background-color: #cfcece;
+  display: block;
+}
+
+.atual {
+  background-color: #cfcece;
+}
+
+.li2 {
+  width: 120px;
+}
+
+.list {
+  height: 70px;
+  align-items: center;
+}
+
+/*Cards*/
+.card {
   padding-top: 60px;
   display: flex;
   align-items: center;
@@ -25,7 +68,7 @@ img {
   border-top-right-radius: 6px;
 }
 
-ul {
+.card-ul {
   border-top: 1px solid black;
   font-family: "Courier New", Courier, monospace;
   padding-left: 10px;
@@ -33,7 +76,7 @@ ul {
   font-size: 1.1rem;
 }
 
-li {
+.card-li {
   user-select: none;
   list-style: none;
   background-color: white;

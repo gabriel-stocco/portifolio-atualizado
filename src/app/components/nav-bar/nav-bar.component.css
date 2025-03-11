@@ -5,11 +5,8 @@ nav {
   justify-content: space-around;
   font-size: 1rem;
   font-family: "Arial", cursive;
-  position: fixed;
   width: 100%;
-
-  z-index: 1;
-  height: 50px;
+  margin-bottom: 20px;
 }
 
 label {
