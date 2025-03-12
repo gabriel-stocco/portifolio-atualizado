@@ -1,109 +1,111 @@
 <!-- Paginação superior -->
-<ul class="pagination">
-  @if(pagNum != 1){
-  <li (click)="passPageEmit(-1)">
-    <a>
-      <span aria-hidden="true">&laquo;</span>
-    </a>
-  </li>
-  } @if (pagNum - 2 > 0){
-  <li (click)="passPageEmit(-2)">
-    <a>{{ pagNum - 2 }}</a>
-  </li>
-  } @if (pagNum - 1 > 0){
-  <li (click)="passPageEmit(-1)">
-    <a>{{ pagNum - 1 }}</a>
-  </li>
-  }
+<div class="all">
+  <ul class="pagination">
+    @if(pagNum != 1){
+    <li (click)="passPageEmit(-1)">
+      <a>
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    } @if (pagNum - 2 > 0){
+    <li (click)="passPageEmit(-2)">
+      <a>{{ pagNum - 2 }}</a>
+    </li>
+    } @if (pagNum - 1 > 0){
+    <li (click)="passPageEmit(-1)">
+      <a>{{ pagNum - 1 }}</a>
+    </li>
+    }
 
-  <li class="atual">
-    <a>{{ pagNum }}</a>
-  </li>
+    <li class="atual">
+      <a>{{ pagNum }}</a>
+    </li>
 
-  @if(pagNum + 1 <= 42){
-  <li (click)="passPageEmit(+1)">
-    <a>{{ pagNum + 1 }}</a>
-  </li>
-  } @if(pagNum + 2 <= 42){
-  <li (click)="passPageEmit(+2)">
-    <a>{{ pagNum + 2 }}</a>
-  </li>
-  } @if(pagNum != 42){
-  <li (click)="passPageEmit(+1)">
-    <a>
-      <span aria-hidden="true">&raquo;</span>
-    </a>
-  </li>
-  }
-</ul>
-<!-- Primeiro/Ultimo superior -->
-<ul class="pagination">
-  <li class="li2" (click)="getCard(1)">
-    <a>Primeiro</a>
-  </li>
-  <li class="li2" (click)="getCard(42)"><a>Último</a></li>
-</ul>
+    @if(pagNum + 1 <= 42){
+    <li (click)="passPageEmit(+1)">
+      <a>{{ pagNum + 1 }}</a>
+    </li>
+    } @if(pagNum + 2 <= 42){
+    <li (click)="passPageEmit(+2)">
+      <a>{{ pagNum + 2 }}</a>
+    </li>
+    } @if(pagNum != 42){
+    <li (click)="passPageEmit(+1)">
+      <a>
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    }
+  </ul>
+  <!-- Primeiro/Ultimo superior -->
+  <ul class="pagination">
+    <li class="li2" (click)="getCard(1)">
+      <a>Primeiro</a>
+    </li>
+    <li class="li2" (click)="getCard(42)"><a>Último</a></li>
+  </ul>
 
-<!-- Cards -->
-<div class="card">
-  @for(person of characters; track person){
+  <!-- Cards -->
+  <div class="card">
+    @for(person of characters; track person){
 
-  <div class="box">
-    <img src="{{ person.image }}" />
+    <div class="box">
+      <img src="{{ person.image }}" />
 
-    <h5 class="card-title">{{ person.id }} : {{ person.name }}</h5>
+      <h5 class="card-title">{{ person.id }} : {{ person.name }}</h5>
 
-    <ul class="card-ul">
-      <li class="card-li">Status: {{ person.status }}</li>
-      <li class="card-li">Species: {{ person.species }}</li>
-      <li class="card-li">Gender: {{ person.gender }}</li>
-    </ul>
+      <ul class="card-ul">
+        <li class="card-li">Status: {{ person.status }}</li>
+        <li class="card-li">Species: {{ person.species }}</li>
+        <li class="card-li">Gender: {{ person.gender }}</li>
+      </ul>
+    </div>
+    }
   </div>
-  }
+
+  <!-- Paginação inferior -->
+  <ul class="pagination">
+    @if(pagNum != 1){
+    <li (click)="passPageEmit(-1)">
+      <a>
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    } @if (pagNum - 2 > 0){
+    <li (click)="passPageEmit(-2)">
+      <a>{{ pagNum - 2 }}</a>
+    </li>
+    } @if (pagNum - 1 > 0){
+    <li (click)="passPageEmit(-1)">
+      <a>{{ pagNum - 1 }}</a>
+    </li>
+    }
+
+    <li class="atual">
+      <a>{{ pagNum }}</a>
+    </li>
+
+    @if(pagNum + 1 <= 42){
+    <li (click)="passPageEmit(+1)">
+      <a>{{ pagNum + 1 }}</a>
+    </li>
+    } @if(pagNum + 2 <= 42){
+    <li (click)="passPageEmit(+2)">
+      <a>{{ pagNum + 2 }}</a>
+    </li>
+    } @if(pagNum != 42){
+    <li (click)="passPageEmit(+1)">
+      <a>
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    }
+  </ul>
+  <!-- Primeiro/Ultimo inferior -->
+  <ul class="pagination">
+    <li class="li2" (click)="getCard(0)">
+      <a>Primeiro</a>
+    </li>
+    <li class="li2" (click)="getCard(42)"><a>Último</a></li>
+  </ul>
 </div>
-
-<!-- Paginação inferior -->
-<ul class="pagination">
-  @if(pagNum != 1){
-  <li (click)="passPageEmit(-1)">
-    <a>
-      <span aria-hidden="true">&laquo;</span>
-    </a>
-  </li>
-  } @if (pagNum - 2 > 0){
-  <li (click)="passPageEmit(-2)">
-    <a>{{ pagNum - 2 }}</a>
-  </li>
-  } @if (pagNum - 1 > 0){
-  <li (click)="passPageEmit(-1)">
-    <a>{{ pagNum - 1 }}</a>
-  </li>
-  }
-
-  <li class="atual">
-    <a>{{ pagNum }}</a>
-  </li>
-
-  @if(pagNum + 1 <= 42){
-  <li (click)="passPageEmit(+1)">
-    <a>{{ pagNum + 1 }}</a>
-  </li>
-  } @if(pagNum + 2 <= 42){
-  <li (click)="passPageEmit(+2)">
-    <a>{{ pagNum + 2 }}</a>
-  </li>
-  } @if(pagNum != 42){
-  <li (click)="passPageEmit(+1)">
-    <a>
-      <span aria-hidden="true">&raquo;</span>
-    </a>
-  </li>
-  }
-</ul>
-<!-- Primeiro/Ultimo inferior -->
-<ul class="pagination">
-  <li class="li2" (click)="getCard(0)">
-    <a>Primeiro</a>
-  </li>
-  <li class="li2" (click)="getCard(42)"><a>Último</a></li>
-</ul>
