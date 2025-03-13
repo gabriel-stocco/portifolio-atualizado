@@ -23,21 +23,21 @@ p {
   font-size: 1.4rem;
 }
 
-.principal {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 25px;
   height: 100%;
   width: 100%;
-
+  padding-top: 70px;
   background-repeat: repeat-y;
   background-size: contain;
   background-position: center center;
 }
 
 .container {
-  min-height: 500px;
+  min-height: 450px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -56,7 +56,7 @@ p {
 
 .line {
   background: rgba(241, 241, 241, 0.808);
-  height: 500px;
+  height: 450px;
   width: 5px;
   top: 280px;
   user-select: none;
@@ -67,7 +67,7 @@ p {
 .txt1 {
   width: 100%;
   max-width: 300px;
-  max-height: 500px;
+  max-height: 400px;
   min-height: 300px;
   padding: 30px;
   padding-top: 15px;

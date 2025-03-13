@@ -1,0 +1,50 @@
+<div class="main">
+  <h1>Cadastro de usuário</h1>
+  <p class="subtitulo">Preencha as informações</p>
+  <form [formGroup]="formulario">
+    <fieldset class="grupo">
+      <div class="dado">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" formControlName="nome" required />
+      </div>
+      <div class="dado sobrenome">
+        <label for="sobrenome">Sobrenome</label>
+        <input
+          type="text"
+          name="sobrenome"
+          formControlName="sobrenome"
+          required
+        />
+      </div>
+    </fieldset>
+
+    <fieldset class="grupo">
+      <div class="dado">
+        <label for="idade">Idade</label>
+        <input type="number" name="idade" formControlName="idade" required />
+      </div>
+      <div class="espaço"></div>
+    </fieldset>
+
+    <fieldset class="grupo">
+      <div class="dado">
+        <label for="profissao">Profissão</label>
+        <input
+          type="text"
+          name="profissao"
+          formControlName="profissao"
+          required
+        />
+      </div>
+
+      <div class="dado e-mail">
+        <label for="email">E-mail</label>
+        <input type="text" name="email" formControlName="email" required />
+      </div>
+    </fieldset>
+
+    <button type="submit" (click)="enviarFormulario()" routerLink="/crud">
+      Concluir
+    </button>
+  </form>
+</div>

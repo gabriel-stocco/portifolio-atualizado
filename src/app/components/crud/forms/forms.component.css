@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  padding-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  font-family: sans-serif;
+  color: #59429d;
+  background-color: #f0f8ff;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(72, 37, 107);
+  font-size: 38px;
+}
+.subtitulo {
+  text-align: center;
+  color: rgb(72, 37, 107);
+  font-weight: bolder;
+  font-size: 22px;
+}
+input {
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 5px;
+  height: 26px;
+}
+
+input :focus {
+  background: #e0e0f8;
+}
+
+.grupo {
+  display: flex;
+  margin-top: 50px;
+  font-weight: 600;
+  align-items: center;
+  border: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.dado {
+  display: flex;
+  flex-direction: column;
+}
+
+.sobrenome,
+.e-mail {
+  margin-left: 30px;
+}
+
+button {
+  cursor: pointer;
+  font-family: sans-serif;
+  background-color: rgb(72, 37, 107);
+  border-radius: 5px;
+  color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border: 0;
+  width: 80px;
+  height: 30px;
+  margin-top: 60px;
+}
+
+.espaço {
+  width: 203px;
+}
+button:hover {
+  background-color: #867ca7;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
+}
+
+@media screen and (max-width: 685px) {
+  form {
+    padding-top: 30px;
+  }
+  .grupo {
+    flex-direction: column;
+    margin: 0;
+    justify-content: space-evenly;
+  }
+
+  .dado {
+    margin: 0;
+    margin-top: 15px;
+    width: 200px;
+  }
+
+  .button {
+    margin-top: 30px;
+    margin-left: 8vh;
+  }
+}

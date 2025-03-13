@@ -1,0 +1,39 @@
+<div class="main">
+  <div class="button">
+    <button (click)="criarUsuario()">Criar Usuário</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Idade</th>
+        <th>Profissão</th>
+        <th>E-mail</th>
+        <th class="final_space_head"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of dados">
+        <td>{{ person.id }}</td>
+        <td>{{ person.nome }}</td>
+        <td>{{ person.sobrenome }}</td>
+        <td>{{ person.idade }}</td>
+        <td>{{ person.profissao }}</td>
+        <td>{{ person.email }}</td>
+        <td class="final_space_body">
+          <p
+            class="edit"
+            (click)="updatePlanilha(person.id)"
+            routerLink="/crud/formulário"
+          >
+            Editar
+          </p>
+          <p class="del" (click)="delUsuario(person.id)">X</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

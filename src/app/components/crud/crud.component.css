@@ -1,0 +1,97 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  text-align: center;
+  user-select: none;
+  background-color: rgba(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+}
+
+table {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  user-select: text;
+  position: relative;
+  border-collapse: collapse;
+}
+
+thead tr {
+  height: 60px;
+  position: sticky;
+  font-size: 26px;
+  font-weight: 900;
+  color: rebeccapurple;
+  top: 60px;
+  background-color: rgba(255, 255, 255);
+  user-select: none;
+  height: 50px;
+}
+
+tbody tr {
+  color: rgb(43, 43, 43);
+}
+
+tbody tr td {
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+tr:nth-child(2n) {
+  background-color: lightgrey;
+}
+td {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+button {
+  border-radius: 15px;
+  width: 130px;
+  height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button {
+  text-align: end;
+  margin-right: 50px;
+}
+
+p {
+  cursor: pointer;
+  margin: auto;
+}
+
+.edit {
+  color: blue;
+}
+
+.edit:hover {
+  color: rgba(0, 0, 255, 0.562);
+}
+
+.final_space_body {
+  display: flex;
+  height: 41px;
+}
+
+.final_space_head {
+  width: 150px;
+}
+
+.del {
+  color: red;
+  font-size: 24px;
+  font-family: cursive;
+}
+
+.del:hover {
+  color: rgba(255, 0, 0, 0.479);
+}
