@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,19 +9,23 @@ export class ApiServiceService {
   apiRickAndMortyUrl = 'https://rickandmortyapi.com/api/character?page=';
 
   apiWeatherUrl =
-    'https://weather.contrateumdev.com.br/api/weather/city/?city=';
+    'https://api.weatherapi.com/v1/forecast.json?key=0524cc0a7bb34e26a84193646252003&q=Indaiatuba&days=2';
 
   apiCRUD = 'https://sheetdb.io/api/v1/f70qm0bn2zv4l';
 
   constructor(private httpClient: HttpClient) {}
 
+  //API RICK AND MORTY
   getCardService(pag: number): Observable<any> {
     return this.httpClient.get<any>(this.apiRickAndMortyUrl + pag);
   }
 
-  getWeatherService(cidade: string, estado: string): Observable<any> {
-    return this.httpClient.get<any>(this.apiWeatherUrl + cidade + ',' + estado);
+  //API WEATHER
+
+  getWeatherAPI(): Observable<any> {
+    return this.httpClient.get<any>(this.apiWeatherUrl);
   }
+  //API CRUD
 
   getPlanilhaService(): Observable<any> {
     return this.httpClient.get<any>(this.apiCRUD);

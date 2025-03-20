@@ -5,6 +5,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { FormsComponent } from './components/crud/forms/forms.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 export const routes: Routes = [
   {
@@ -22,4 +23,5 @@ export const routes: Routes = [
   { path: 'crud', component: CrudComponent },
   { path: 'crud/formulario', component: FormsComponent },
   { path: 'loading', component: LoadingComponent },
+  { path: 'clima', component: WeatherComponent },
 ];
