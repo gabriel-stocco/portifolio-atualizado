@@ -9,7 +9,7 @@ export class ApiServiceService {
   apiRickAndMortyUrl = 'https://rickandmortyapi.com/api/character?page=';
 
   apiWeatherUrl =
-    'https://api.weatherapi.com/v1/forecast.json?key=0524cc0a7bb34e26a84193646252003&q=Indaiatuba&days=2';
+    'https://api.weatherapi.com/v1/forecast.json?key=0524cc0a7bb34e26a84193646252003&q=';
 
   apiCRUD = 'https://sheetdb.io/api/v1/f70qm0bn2zv4l';
 
@@ -22,8 +22,8 @@ export class ApiServiceService {
 
   //API WEATHER
 
-  getWeatherAPI(): Observable<any> {
-    return this.httpClient.get<any>(this.apiWeatherUrl);
+  getWeatherAPI(city: string): Observable<any> {
+    return this.httpClient.get<any>(this.apiWeatherUrl + city + '&days=5');
   }
   //API CRUD
 

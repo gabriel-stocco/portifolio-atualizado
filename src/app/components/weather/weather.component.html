@@ -1,1 +1,38 @@
-<p>weather works!</p>
+<div id="main">
+  <div id="search">
+    <div class="d-flex" role="search">
+      <input
+        class="form-control me-2"
+        placeholder="Cidade"
+        (keyup.enter)="this.getForecast(city)"
+        (keyup.enter)="city = ''"
+        [(ngModel)]="city"
+      />
+      <button
+        class="btn btn-outline-success"
+        (click)="this.getForecast(city)"
+        (click)="city = ''"
+      >
+        Procurar
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="" alt="" />
+
+    <div class="clima_temp">
+      <p>Cidade:{{ apiResult?.location?.name }}</p>
+      <p>Clima:{{ apiResult?.current?.condition?.text }}</p>
+      <p>Temperatura: {{ apiResult?.current?.temp_c }}ºC</p>
+    </div>
+  </div>
+
+  <div class="container cont2">
+    <div class="container_dados box">
+      <img src="assets/umidade-60.png" alt="" />
+      <p>Humidade:</p>
+      <p>{{ apiResult?.current?.humidity }}%</p>
+    </div>
+  </div>
+</div>
