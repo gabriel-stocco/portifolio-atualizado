@@ -22,8 +22,10 @@ export class ApiServiceService {
 
   //API WEATHER
 
-  getWeatherAPI(city: string): Observable<any> {
-    return this.httpClient.get<any>(this.apiWeatherUrl + city + '&days=5');
+  getWeatherAPI(city: string, dias: number): Observable<any> {
+    return this.httpClient.get<any>(
+      this.apiWeatherUrl + city + '&days=' + dias
+    );
   }
   //API CRUD
 

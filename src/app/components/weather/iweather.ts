@@ -1,17 +1,18 @@
 export interface Iweather {
   current: Icurrent;
-  forecast: { forecastDay: [IforecastDay] };
+  forecast: { forecastday: IforecastDay[] };
   location: { name: string };
 }
 
-export interface Icurrent {
-  condition: { text: string };
+interface Icurrent {
+  condition: { text: string; icon: String };
   humidity: number;
   temp_c: number;
   wind_kph: number;
 }
 
-export interface IforecastDay {
+interface IforecastDay {
+  date: String;
   day: {
     condition: { text: String };
     maxtemp_c: number;

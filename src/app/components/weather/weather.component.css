@@ -1,92 +1,62 @@
-p {
+* {
+  background-color: #f0f8ff;
+  color: rgb(23, 91, 114);
+}
+
+.main {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  padding-top: 80px;
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+.topo {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+p,
+h1 {
   padding: 0;
   margin: 0;
 }
 
-form {
-  width: 350px;
-  margin-right: 20px;
+h1 {
+  font-size: 30px;
 }
-
-select {
-  font-size: 16px;
-  margin-left: 5px;
-}
-
-img {
-  margin-right: 15px;
-}
-#main {
-  text-align: center;
-  padding-top: 80px;
-  font-family: "Garamond", serif;
-  background-color: #f0f8ff;
-  height: 100vh;
-  padding-bottom: 50px;
-}
-
-#search {
+.search {
   margin-right: 100px;
   float: right;
 }
 
-#state {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: flex;
-  margin-top: 5px;
-  font-size: 20px;
-}
-
-.box {
-  border: 2px solid rgb(88, 157, 235);
-  border-radius: 20%;
-  padding: 10px;
-}
-
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 50px;
   font-weight: bolder;
-  font-size: 40px;
 }
 
-.container_dados {
+.dados {
   display: flex;
-  margin: 0;
-  font-weight: bolder;
-  font-size: 40px;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  border-left: 1px solid gray;
+  border-radius: 2%;
 }
-.clima_temp {
-  padding-left: 10px;
-}
-
-.cont2 {
-  justify-content: space-evenly;
-  margin-bottom: 0;
-}
-.img {
-  position: relative;
+.data {
+  display: flex;
+  align-items: center;
   height: 60px;
-  top: 25px;
-}
+  width: 60px;
 
-.min_max {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10vh;
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: cursive;
+  background: lightgray;
 }
-
-.min_max_img {
-  position: relative;
-  top: 10px;
-  height: 40px;
-}
-
-.img_quente {
-  margin-bottom: 15px;
-}
-
 @media screen and (max-width: 767px) {
   .container {
     flex-direction: column;

@@ -1,38 +1,41 @@
-<div id="main">
-  <div id="search">
-    <div class="d-flex" role="search">
-      <input
-        class="form-control me-2"
-        placeholder="Cidade"
-        (keyup.enter)="this.getForecast(city)"
-        (keyup.enter)="city = ''"
-        [(ngModel)]="city"
-      />
-      <button
-        class="btn btn-outline-success"
-        (click)="this.getForecast(city)"
-        (click)="city = ''"
-      >
-        Procurar
-      </button>
+<div class="main">
+  <div class="topo">
+    <div class="container">
+      <h1>
+        Previsão para 5 dias em
+        {{ apiResult?.location?.name }}
+      </h1>
+    </div>
+    <div class="search">
+      <div>
+        <input
+          class="search_bar"
+          placeholder="Cidade"
+          (keyup.enter)="this.getForecast(city)"
+          (keyup.enter)="city = ''"
+          [(ngModel)]="city"
+        />
+        <button
+          (click)="this.getForecast(city)"
+          (click)="city = ''"
+          (click)="ver()"
+        >
+          Procurar
+        </button>
+      </div>
     </div>
   </div>
 
-  <div class="container">
-    <img src="" alt="" />
+  <div
+    class="dados"
+    *ngFor="let previsao of apiResult?.forecast?.forecastday; let i = index"
+  >
+    <p class="data">{{ forecastDates[i] }}</p>
 
-    <div class="clima_temp">
-      <p>Cidade:{{ apiResult?.location?.name }}</p>
-      <p>Clima:{{ apiResult?.current?.condition?.text }}</p>
+    <div>
+      <p>Clima: {{ apiResult?.current?.condition?.text }}</p>
       <p>Temperatura: {{ apiResult?.current?.temp_c }}ºC</p>
     </div>
-  </div>
-
-  <div class="container cont2">
-    <div class="container_dados box">
-      <img src="assets/umidade-60.png" alt="" />
-      <p>Humidade:</p>
-      <p>{{ apiResult?.current?.humidity }}%</p>
-    </div>
+    <img src="{{ apiResult?.current?.condition?.icon }}" alt="" />
   </div>
 </div>

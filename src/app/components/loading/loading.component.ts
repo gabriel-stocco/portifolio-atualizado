@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './loading.component.css',
 })
 export class LoadingComponent {
-  ngOnInit(): void {
+  onInit() {
     setTimeout(() => {
       window.location.href = '/crud';
-    }, 1000);
+    }, 700);
   }
 }

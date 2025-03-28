@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ApiServiceService } from '../../services/api-service.service';
 import { IDados } from './IDados';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'app-crud',
@@ -11,8 +12,11 @@ import { IDados } from './IDados';
 })
 export class CrudComponent {
   constructor(private apiServiceService: ApiServiceService) {}
+
   dados!: IDados[];
   usuarioAtual: IDados | undefined;
+
+  showLoading: boolean = false;
 
   ngOnInit(): void {
     this.getPlanilha();
@@ -38,7 +42,6 @@ export class CrudComponent {
 
   delUsuario(id: number) {
     this.apiServiceService.delPlanilhaService(id);
-
     window.location.href = '/loading';
   }
 }
